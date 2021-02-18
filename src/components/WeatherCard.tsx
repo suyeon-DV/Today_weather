@@ -1,8 +1,22 @@
 import styled from "styled-components";
+import { useEffect } from "react";
 import { useState } from "react";
+import axios, { AxiosResponse } from "axios";
 
 function WeatherCard() {
   const [img] = useState("");
+  const [weatherList, setWeatherList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        `api.openweathermap.org/data/2.5/weather?q=seoul&appid=764e4cff8b404f68537f73a69aea8a05`
+      )
+      .then((res: AxiosResponse) => {
+        console.log(res);
+        // setWeatherList(res)
+      });
+  }, []);
 
   return (
     <WeatherCardCon>

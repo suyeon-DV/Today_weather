@@ -21,7 +21,6 @@ const TitleCon = styled.div`
     padding: 12px 4px;
     color: #111111;
     font-size: 1rem;
-    /* font-weight: 700; */
   }
   span {
     padding: 4px 8px;
