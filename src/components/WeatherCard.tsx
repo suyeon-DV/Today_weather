@@ -12,9 +12,8 @@ function WeatherCard() {
       .get(
         `api.openweathermap.org/data/2.5/weather?q=seoul&appid=764e4cff8b404f68537f73a69aea8a05`
       )
-      .then((res: AxiosResponse) => {
+      .then((res: AxiosResponse<any>) => {
         console.log(res);
-        // setWeatherList(res)
       });
   }, []);
 
@@ -39,7 +38,6 @@ const WeatherCardCon = styled.div`
     color: white;
   }
   span {
-    /* display: block; */
     text-align: center;
     font-size: 1.6rem;
   }
